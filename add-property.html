@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Your Property - RentKaro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="add-property.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Rent<span>Karo</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="property-details.html">Rent</a></li>
+                    <li><a href="property-details.html">PG</a></li>
+                    <li><a href="#">RentKaro Premium</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="login.html" class="login-btn">Login</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="add-property-container">
+        <div class="container">
+            <h1 class="page-title">List Your Property</h1>
+            <p class="page-subtitle">Reach thousands of potential tenants by listing your property on RentKaro</p>
+
+            <div class="add-property-form-container">
+                <form id="add-property-form" class="add-property-form">
+                    <div class="form-section">
+                        <h2>Basic Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="property-title">Property Title*</label>
+                                <input type="text" id="property-title" name="property-title" required placeholder="e.g., Modern 2BHK Near College">
+                            </div>
+                            <div class="form-group">
+                                <label for="property-type">Property Type*</label>
+                                <select id="property-type" name="property-type" required>
+                                    <option value="">Select Property Type</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="pg">PG/Hostel</option>
+                                    <option value="independent">Independent House</option>
+                                    <option value="room">Single Room</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="property-for">Available For*</label>
+                                <select id="property-for" name="property-for" required>
+                                    <option value="">Select</option>
+                                    <option value="boys">Boys</option>
+                                    <option value="girls">Girls</option>
+                                    <option value="both">Both</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="bedrooms">Bedrooms*</label>
+                                <select id="bedrooms" name="bedrooms" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1 BHK</option>
+                                    <option value="2">2 BHK</option>
+                                    <option value="3">3 BHK</option>
+                                    <option value="4+">4+ BHK</option>
+                                    <option value="single">Single Room</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="price">Monthly Rent (₹)*</label>
+                                <input type="number" id="price" name="price" required placeholder="e.g., 8000">
+                            </div>
+                            <div class="form-group">
+                                <label for="area">Area (sq.ft)</label>
+                                <input type="number" id="area" name="area" placeholder="e.g., 850">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Location Details</h2>
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="address">Full Address*</label>
+                                <input type="text" id="address" name="address" required placeholder="Enter complete address">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="landmark">Landmark</label>
+                                <input type="text" id="landmark" name="landmark" placeholder="e.g., Near Barasat Station">
+                            </div>
+                            <div class="form-group">
+                                <label for="distance">Distance from College (km)</label>
+                                <input type="number" step="0.1" id="distance" name="distance" placeholder="e.g., 0.5">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Property Details</h2>
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="description">Property Description*</label>
+                                <textarea id="description" name="description" rows="4" required placeholder="Describe your property, its features, neighborhood, etc."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="furnished">Furnishing Status</label>
+                                <select id="furnished" name="furnished">
+                                    <option value="">Select</option>
+                                    <option value="fully-furnished">Fully Furnished</option>
+                                    <option value="semi-furnished">Semi Furnished</option>
+                                    <option value="unfurnished">Unfurnished</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="available-from">Available From</label>
+                                <input type="date" id="available-from" name="available-from">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Amenities</h2>
+                        <div class="amenities-grid">
+                            <div class="amenity-checkbox">
+                                <input type="checkbox" id="wifi" name="amenities" value="wifi">
+                                <label for="wifi"><i class="fas fa-wifi"></i> WiFi</label>
+                            </div>
+                            <div class="amenity-checkbox">
+                                <input type="checkbox" id="ac" name="amenities" value="ac">
+                                <label for="ac"><i class="fas fa-snowflake"></i> Air Conditioning</label>
+                            </div>
+                            <div class="amenity-checkbox">
+                                <input type="checkbox" id="food" name="amenities" value="food">
+                                <label for="food"><i class="fas fa-utensils"></i> Food Available</label>
+                            </div>
+                            <div class="amenity-checkbox">
+                                <input type="checkbox" id="tv" name="amenities" value="tv">
+                                <label for="tv"><i class="fas fa-tv"></i> TV</label>
+                            </div>
+                            <div class="amenity-checkbox">
+                                <input type="checkbox" id="parking" name="amenities" value="parking">
+                                <label for="parking"><i class="fas fa-parking"></i> Parking</label>
+                            </div>
+                            <div class="amenity-checkbox">
+                                <input type="checkbox" id="power-backup" name="amenities" value="power-backup">
+                                <label for="power-backup"><i class="fas fa-bolt"></i> Power Backup</label>
+                            </div>
+                            <div class="amenity-checkbox">
+                                <input type="checkbox" id="cleaning" name="amenities" value="cleaning">
+                                <label for="cleaning"><i class="fas fa-broom"></i> Cleaning Service</label>
+                            </div>
+                            <div class="amenity-checkbox">
+                                <input type="checkbox" id="laundry" name="amenities" value="laundry">
+                                <label for="laundry"><i class="fas fa-tshirt"></i> Laundry</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Upload Images</h2>
+                        <p class="image-hint">Add at least 3 images of your property (Max 8 images)</p>
+                        <div class="image-upload-container">
+                            <div class="image-upload-item">
+                                <input type="file" id="image-1" name="images" accept="image/*" class="image-input" required>
+                                <label for="image-1" class="image-label">
+                                    <i class="fas fa-plus"></i>
+                                    <span>Add Image</span>
+                                </label>
+                                <div class="image-preview"></div>
+                            </div>
+                            <div class="image-upload-item">
+                                <input type="file" id="image-2" name="images" accept="image/*" class="image-input" required>
+                                <label for="image-2" class="image-label">
+                                    <i class="fas fa-plus"></i>
+                                    <span>Add Image</span>
+                                </label>
+                                <div class="image-preview"></div>
+                            </div>
+                            <div class="image-upload-item">
+                                <input type="file" id="image-3" name="images" accept="image/*" class="image-input" required>
+                                <label for="image-3" class="image-label">
+                                    <i class="fas fa-plus"></i>
+                                    <span>Add Image</span>
+                                </label>
+                                <div class="image-preview"></div>
+                            </div>
+                            <div class="image-upload-item">
+                                <input type="file" id="image-4" name="images" accept="image/*" class="image-input">
+                                <label for="image-4" class="image-label">
+                                    <i class="fas fa-plus"></i>
+                                    <span>Add Image</span>
+                                </label>
+                                <div class="image-preview"></div>
+                            </div>
+                        </div>
+                        <button type="button" id="add-more-images" class="add-more-btn">Add More Images</button>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Contact Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="owner-name">Your Name*</label>
+                                <input type="text" id="owner-name" name="owner-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="owner-phone">Phone Number*</label>
+                                <input type="tel" id="owner-phone" name="owner-phone" required placeholder="e.g., 9046756410">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="owner-email">Email Address*</label>
+                                <input type="email" id="owner-email" name="owner-email" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="terms-container">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">List Property</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="owner-benefits">
+        <div class="container">
+            <h2 class="section-title">Benefits of Listing with RentKaro</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Wide Reach</h3>
+                    <p>Connect with thousands of students looking for accommodations in Barasat</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Quick Rentals</h3>
+                    <p>Get your property rented quickly with our targeted student audience</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Verified Tenants</h3>
+                    <p>Connect with genuine student tenants with verified profiles</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Better Returns</h3>
+                    <p>Get better rental returns with our premium listing options</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Rent<span>Karo</span></h2>
+                    <p>Your trusted partner for student accommodations in Barasat</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="property-details.html">Rentals</a></li>
+                        <li><a href="property-details.html">PG Accommodations</a></li>
+                        <li><a href="#">Premium</a></li>
+                        <li><a href="add-property.html">List Property</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> aritra.saha@outlook.in</p>
+                    <p><i class="fas fa-phone"></i> +91 9046756410</p>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RentKaro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="add-property.js"></script>
+</body>
+</html> 

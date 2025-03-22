@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern 2BHK Near College - RentKaro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="property-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Rent<span>Karo</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="property-details.html" class="active">Rent</a></li>
+                    <li><a href="property-details.html">PG</a></li>
+                    <li><a href="#">RentKaro Premium</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="property-details-container">
+        <div class="container">
+            <div class="property-header">
+                <div class="property-title">
+                    <h1>Modern 2BHK Near College</h1>
+                    <div class="property-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Jessore Road, Barasat</p>
+                    </div>
+                    <div class="property-tags">
+                        <span class="tag verified">Verified</span>
+                        <span class="tag for-boys">Boys</span>
+                    </div>
+                </div>
+                <div class="property-actions">
+                    <div class="property-price">₹8,000/month</div>
+                    <button class="like-btn"><i class="far fa-heart"></i></button>
+                    <button class="share-btn"><i class="fas fa-share-alt"></i></button>
+                </div>
+            </div>
+            
+            <div class="property-gallery">
+                <div class="main-image">
+                    <img src="images/property1.jpg" alt="Modern 2BHK" id="main-property-image">
+                </div>
+                <div class="thumbnail-images">
+                    <img src="images/property1.jpg" alt="Living Room" class="thumbnail active" onclick="changeImage(this, 'images/property1.jpg')">
+                    <img src="images/property2.jpg" alt="Bedroom" class="thumbnail" onclick="changeImage(this, 'images/property2.jpg')">
+                    <img src="images/property3.jpg" alt="Kitchen" class="thumbnail" onclick="changeImage(this, 'images/property3.jpg')">
+                    <button class="view-all-btn">View All Photos (8)</button>
+                </div>
+            </div>
+            
+            <div class="property-details-grid">
+                <div class="property-info-section">
+                    <div class="property-description">
+                        <h2>Property Description</h2>
+                        <p>This modern 2BHK apartment is perfect for students looking for comfortable accommodation near college. The apartment is fully furnished with all essential amenities and is located in a safe and convenient neighborhood in Barasat.</p>
+                        <p>The apartment features spacious rooms, a well-equipped kitchen, and a balcony with a nice view. It's just a 10-minute walk from the college and has good connectivity to other parts of the city.</p>
+                    </div>
+                    
+                    <div class="property-details-box">
+                        <h2>Property Details</h2>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <span class="detail-label">Property Type</span>
+                                <span class="detail-value">Apartment</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Room Type</span>
+                                <span class="detail-value">2BHK</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Area</span>
+                                <span class="detail-value">850 sq.ft</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Furnishing</span>
+                                <span class="detail-value">Fully Furnished</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Available For</span>
+                                <span class="detail-value">Boys</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Distance from College</span>
+                                <span class="detail-value">0.5 km</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="amenities-section">
+                        <h2>Amenities</h2>
+                        <div class="amenities-grid">
+                            <div class="amenity-item">
+                                <i class="fas fa-wifi"></i>
+                                <span>WiFi</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-snowflake"></i>
+                                <span>Air Conditioning</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>Food Available</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-couch"></i>
+                                <span>Furnished</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-tv"></i>
+                                <span>TV</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-parking"></i>
+                                <span>Parking</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-bolt"></i>
+                                <span>Power Backup</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-broom"></i>
+                                <span>Cleaning</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-section">
+                        <h2>Location</h2>
+                        <div class="map-container">
+                            <!-- This would be replaced with an actual map integration -->
+                            <img src="images/map-placeholder.jpg" alt="Map" class="location-map">
+                        </div>
+                        <div class="nearby-places">
+                            <h3>Nearby Places</h3>
+                            <ul>
+                                <li><i class="fas fa-graduation-cap"></i> College: 0.5 km</li>
+                                <li><i class="fas fa-shopping-cart"></i> Supermarket: 0.2 km</li>
+                                <li><i class="fas fa-hospital"></i> Hospital: 1 km</li>
+                                <li><i class="fas fa-bus"></i> Bus Stop: 0.3 km</li>
+                                <li><i class="fas fa-utensils"></i> Restaurant: 0.4 km</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-section">
+                    <div class="contact-owner-box">
+                        <h2>Contact Owner</h2>
+                        <div class="owner-info">
+                            <div class="owner-img">
+                                <img src="images/owner.jpg" alt="Property Owner">
+                            </div>
+                            <div class="owner-details">
+                                <h3>Rahul Sharma</h3>
+                                <p>Listed 2 weeks ago</p>
+                            </div>
+                        </div>
+                        <div class="contact-buttons">
+                            <a href="tel:+919046756410" class="call-btn">
+                                <i class="fas fa-phone"></i> Call Now
+                            </a>
+                            <a href="#" class="message-btn">
+                                <i class="fas fa-comment"></i> Message
+                            </a>
+                        </div>
+                        <div class="refer-friend">
+                            <p>Do you know someone looking for a place?</p>
+                            <a href="#" class="refer-btn">Refer a Friend</a>
+                        </div>
+                    </div>
+                    
+                    <div class="visit-property-box">
+                        <h2>Schedule a Visit</h2>
+                        <form class="visit-form">
+                            <div class="form-group">
+                                <label for="visit-date">Preferred Date</label>
+                                <input type="date" id="visit-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="visit-time">Preferred Time</label>
+                                <select id="visit-time" required>
+                                    <option value="">Select Time</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="18:00">6:00 PM</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="schedule-btn">Schedule Visit</button>
+                        </form>
+                    </div>
+                    
+                    <div class="additional-services-box">
+                        <h2>Additional Services</h2>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <i class="fas fa-utensils"></i>
+                                <div>
+                                    <h3>Food Service</h3>
+                                    <p>Get daily meals delivered</p>
+                                </div>
+                            </div>
+                            <a href="#" class="add-service-btn">Add</a>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-info">
+                                <i class="fas fa-broom"></i>
+                                <div>
+                                    <h3>Cleaning Service</h3>
+                                    <p>Weekly cleaning service</p>
+                                </div>
+                            </div>
+                            <a href="#" class="add-service-btn">Add</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="similar-properties">
+                <h2>Similar Properties</h2>
+                <div class="property-grid">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <img src="images/property2.jpg" alt="Student Rental">
+                            <div class="property-tag for-boys">Boys</div>
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="property-info">
+                            <h3>1BHK Near Station</h3>
+                            <div class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>Near Barasat Station</p>
+                            </div>
+                            <div class="property-price">₹6,500/month</div>
+                            <div class="property-amenities">
+                                <span class="amenity"><i class="fas fa-wifi"></i> WiFi</span>
+                                <span class="amenity"><i class="fas fa-snowflake"></i> AC</span>
+                            </div>
+                        </div>
+                        <a href="#" class="view-details-btn">View Details</a>
+                    </div>
+                    
+                    <div class="property-card">
+                        <div class="property-img">
+                            <img src="images/property3.jpg" alt="Student Rental">
+                            <div class="property-tag verified">Verified</div>
+                            <div class="property-tag for-boys">Boys</div>
+                            <button class="like-btn"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="property-info">
+                            <h3>2BHK Apartment</h3>
+                            <div class="property-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>College Para, Barasat</p>
+                            </div>
+                            <div class="property-price">₹9,000/month</div>
+                            <div class="property-amenities">
+                                <span class="amenity"><i class="fas fa-wifi"></i> WiFi</span>
+                                <span class="amenity"><i class="fas fa-snowflake"></i> AC</span>
+                            </div>
+                        </div>
+                        <a href="#" class="view-details-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Rent<span>Karo</span></h2>
+                    <p>Your trusted partner for student accommodations in Barasat</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="property-details.html">Rentals</a></li>
+                        <li><a href="property-details.html">PG Accommodations</a></li>
+                        <li><a href="#">Premium</a></li>
+                        <li><a href="add-property.html">List Property</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> aritra.saha@outlook.in</p>
+                    <p><i class="fas fa-phone"></i> +91 9046756410</p>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RentKaro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function changeImage(thumbnailElement, imageSrc) {
+            // Update main image
+            document.getElementById('main-property-image').src = imageSrc;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            thumbnailElement.classList.add('active');
+        }
+    </script>
+</body>
+</html> 

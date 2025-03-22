@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentKaro - Student Accommodations in Barasat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Rent<span>Karo</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="property-details.html">Rent</a></li>
+                    <li><a href="property-details.html">PG</a></li>
+                    <li><a href="#">RentKaro Premium</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Your Perfect Student Accommodation in Barasat</h1>
+                <p>Verified PGs and Rental Properties for Students</p>
+                <div class="search-box">
+                    <form>
+                        <div class="form-group">
+                            <select id="property-type">
+                                <option value="">Property Type</option>
+                                <option value="rent">Rental</option>
+                                <option value="pg">PG</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="gender">
+                                <option value="">For</option>
+                                <option value="boys">Boys</option>
+                                <option value="girls">Girls</option>
+                                <option value="both">Both</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="budget">
+                                <option value="">Budget</option>
+                                <option value="under-5000">Under ₹5,000</option>
+                                <option value="5000-10000">₹5,000 - ₹10,000</option>
+                                <option value="above-10000">Above ₹10,000</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="search-btn">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-properties">
+        <div class="container">
+            <h2 class="section-title">Featured Properties</h2>
+            <div class="property-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="rent">Rental</button>
+                <button class="filter-btn" data-filter="pg">PG</button>
+                <div class="sort-options">
+                    <select id="sort-by">
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="distance">Distance</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="property-grid">
+                <!-- Property Card 1 -->
+                <div class="property-card">
+                    <div class="property-img">
+                        <img src="images/property1.jpg" alt="Student Rental">
+                        <div class="property-tag verified">Verified</div>
+                        <div class="property-tag for-boys">Boys</div>
+                        <button class="like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="property-info">
+                        <h3>Modern 2BHK Near College</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Jessore Road, Barasat</p>
+                        </div>
+                        <div class="property-price">₹8,000/month</div>
+                        <div class="property-amenities">
+                            <span class="amenity"><i class="fas fa-wifi"></i> WiFi</span>
+                            <span class="amenity"><i class="fas fa-snowflake"></i> AC</span>
+                            <span class="amenity"><i class="fas fa-utensils"></i> Food Available</span>
+                        </div>
+                    </div>
+                    <a href="property-details.html" class="view-details-btn">View Details</a>
+                </div>
+                
+                <!-- Property Card 2 -->
+                <div class="property-card">
+                    <div class="property-img">
+                        <img src="images/property2.jpg" alt="PG Accommodation">
+                        <div class="property-tag for-girls">Girls</div>
+                        <button class="like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="property-info">
+                        <h3>Premium PG Accommodation</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Near Barasat Station</p>
+                        </div>
+                        <div class="property-price">₹6,500/month</div>
+                        <div class="property-amenities">
+                            <span class="amenity"><i class="fas fa-wifi"></i> WiFi</span>
+                            <span class="amenity"><i class="fas fa-broom"></i> Cleaning</span>
+                        </div>
+                    </div>
+                    <a href="property-details.html" class="view-details-btn">View Details</a>
+                </div>
+                
+                <!-- Property Card 3 -->
+                <div class="property-card">
+                    <div class="property-img">
+                        <img src="images/property3.jpg" alt="Student Rental">
+                        <div class="property-tag verified">Verified</div>
+                        <div class="property-tag for-both">Boys & Girls</div>
+                        <button class="like-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="property-info">
+                        <h3>Student Friendly 1BHK</h3>
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>College Para, Barasat</p>
+                        </div>
+                        <div class="property-price">₹5,000/month</div>
+                        <div class="property-amenities">
+                            <span class="amenity"><i class="fas fa-wifi"></i> WiFi</span>
+                        </div>
+                    </div>
+                    <a href="property-details.html" class="view-details-btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="see-more-container">
+                <a href="property-details.html" class="see-more-btn">See More Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="premium-section">
+        <div class="container">
+            <div class="premium-content">
+                <h2>Upgrade to RentKaro Premium</h2>
+                <p>Get early access to verified properties, premium support, and exclusive deals</p>
+                <ul class="premium-features">
+                    <li><i class="fas fa-check-circle"></i> Priority property alerts</li>
+                    <li><i class="fas fa-check-circle"></i> Direct owner contact</li>
+                    <li><i class="fas fa-check-circle"></i> No service fee on bookings</li>
+                    <li><i class="fas fa-check-circle"></i> Premium customer support</li>
+                </ul>
+                <a href="login.html" class="premium-btn">Get Premium</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">Additional Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Food Services</h3>
+                    <p>Nutritious and delicious meals at your doorstep</p>
+                    <a href="#" class="service-btn">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-broom"></i>
+                    <h3>Cleaning Services</h3>
+                    <p>Professional cleaning for your accommodation</p>
+                    <a href="#" class="service-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="refer-section">
+        <div class="container">
+            <div class="refer-content">
+                <h2>Refer & Earn</h2>
+                <p>Refer your friends to RentKaro and earn rewards when they book!</p>
+                <a href="login.html" class="refer-btn">Refer Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="add-property-promo">
+        <div class="container">
+            <div class="refer-content">
+                <h2>Are You a Property Owner?</h2>
+                <p>List your property on RentKaro and connect with students looking for accommodation!</p>
+                <a href="add-property.html" class="refer-btn">List Your Property</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Rent<span>Karo</span></h2>
+                    <p>Your trusted partner for student accommodations in Barasat</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="property-details.html">Rentals</a></li>
+                        <li><a href="property-details.html">PG Accommodations</a></li>
+                        <li><a href="#">Premium</a></li>
+                        <li><a href="add-property.html">List Property</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> aritra.saha@outlook.in</p>
+                    <p><i class="fas fa-phone"></i> +91 9046756410</p>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 RentKaro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
