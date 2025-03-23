@@ -1,4 +1,60 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Loading Screen
+    const body = document.body;
+    
+    // Create loading screen element if it doesn't exist
+    if (!document.querySelector('.loading-screen')) {
+        const loadingScreen = document.createElement('div');
+        loadingScreen.className = 'loading-screen';
+        
+        const loadingContent = document.createElement('div');
+        loadingContent.className = 'loading-content';
+        
+        const loadingLogo = document.createElement('div');
+        loadingLogo.className = 'loading-logo';
+        
+        const loadingLogoPart1 = document.createElement('span');
+        loadingLogoPart1.className = 'loading-logo-part1';
+        loadingLogoPart1.textContent = 'Rent';
+        
+        const loadingLogoPart2 = document.createElement('span');
+        loadingLogoPart2.className = 'loading-logo-part2';
+        loadingLogoPart2.textContent = 'Karo';
+        
+        const loadingSpinner = document.createElement('div');
+        loadingSpinner.className = 'loading-spinner';
+        
+        loadingLogo.appendChild(loadingLogoPart1);
+        loadingLogo.appendChild(loadingLogoPart2);
+        loadingContent.appendChild(loadingLogo);
+        loadingContent.appendChild(loadingSpinner);
+        loadingScreen.appendChild(loadingContent);
+        
+        // Add it to the beginning of the body
+        body.insertBefore(loadingScreen, body.firstChild);
+        
+        // Hide content during loading
+        body.style.overflow = 'hidden';
+        
+        // Hide loading screen after animation finishes
+        setTimeout(function() {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.visibility = 'hidden';
+            body.style.overflow = '';
+            
+            // Add fade-in class to main elements for smooth transition
+            document.querySelector('header').classList.add('fade-in');
+            if (document.querySelector('.hero')) {
+                document.querySelector('.hero').classList.add('fade-in');
+            }
+            
+            // Remove loading screen after transition
+            setTimeout(function() {
+                loadingScreen.remove();
+            }, 500);
+        }, 1500);
+    }
+    
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navigation = document.querySelector('nav');
@@ -9,6 +65,24 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.toggle('active');
         });
     }
+    
+    // Add hover animations to buttons
+    const addBounceEffect = (elements) => {
+        if (!elements) return;
+        
+        elements.forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.classList.add('bounce');
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                this.classList.remove('bounce');
+            });
+        });
+    };
+    
+    // Add bounce effect to buttons
+    addBounceEffect(document.querySelectorAll('.search-btn, .see-more-btn, .premium-btn, .refer-btn, .service-btn'));
     
     // Property Filters
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -150,6 +224,29 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000);
         }
     }
+    
+    // Add property card animations
+    function setupPropertyCardAnimations() {
+        const propertyCards = document.querySelectorAll('.property-card');
+        
+        propertyCards.forEach((card, index) => {
+            // Staggered animation on page load
+            card.style.animation = `fadeInUp ${0.3 + (index * 0.1)}s ease forwards`;
+            card.style.opacity = '0';
+            
+            // Add hover animations
+            card.addEventListener('mouseenter', function() {
+                this.querySelector('.property-img img').style.transform = 'scale(1.1)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.querySelector('.property-img img').style.transform = 'scale(1)';
+            });
+        });
+    }
+    
+    // Setup property card animations after loading screen is hidden
+    setTimeout(setupPropertyCardAnimations, 1500);
     
     // Mobile-specific behaviors
     function setupMobileSpecificBehaviors() {
