@@ -55,6 +55,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1500);
     }
     
+    // Modern Indian Home Sample Images
+    const modernIndianHomes = [
+        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', // Modern villa
+        'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', // Contemporary home
+        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', // Elegant interior
+        'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', // Modern apartment
+        'https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', // Stylish home
+        'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', // Modern living space
+        'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80', // Contemporary design
+        'https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'  // Premium housing
+    ];
+    
+    // Replace property images with modern Indian homes
+    const propertyImages = document.querySelectorAll('.property-img img');
+    if (propertyImages.length > 0) {
+        propertyImages.forEach((img, index) => {
+            // Use modulo to cycle through available images if there are more property cards than images
+            const imageIndex = index % modernIndianHomes.length;
+            img.src = modernIndianHomes[imageIndex];
+            img.alt = "Modern Indian Home";
+            
+            // Add proper loading and error handling
+            img.onerror = function() {
+                // Fallback image if the Unsplash image fails to load
+                this.src = 'https://via.placeholder.com/300x200/f1f0e9/0d4715?text=RentKaro+Property';
+            };
+            
+            // Add a loading style
+            img.style.transition = 'opacity 0.3s ease';
+            img.style.opacity = '0';
+            img.onload = function() {
+                this.style.opacity = '1';
+            };
+        });
+    }
+    
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navigation = document.querySelector('nav');
@@ -242,6 +278,27 @@ document.addEventListener('DOMContentLoaded', function() {
             card.addEventListener('mouseleave', function() {
                 this.querySelector('.property-img img').style.transform = 'scale(1)';
             });
+        });
+    }
+    
+    // Replace main gallery images on property detail page if present
+    const mainPropertyImage = document.getElementById('main-property-image');
+    const thumbnailImages = document.querySelectorAll('.thumbnail');
+    
+    if (mainPropertyImage && thumbnailImages.length > 0) {
+        // Set the main image to the first one in our collection
+        mainPropertyImage.src = modernIndianHomes[0];
+        
+        // Update thumbnail images too
+        thumbnailImages.forEach((thumbnail, index) => {
+            // Use modulo to cycle through images if needed
+            const imageIndex = index % modernIndianHomes.length;
+            thumbnail.src = modernIndianHomes[imageIndex];
+            
+            // Update the onclick handler to use our new image sources
+            thumbnail.onclick = function() {
+                changeImage(this, modernIndianHomes[imageIndex]);
+            };
         });
     }
     

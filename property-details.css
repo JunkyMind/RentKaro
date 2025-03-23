@@ -23,6 +23,7 @@
     display: flex;
     margin-top: 10px;
     gap: 10px;
+    flex-direction: column;
 }
 
 .property-tags .tag {
@@ -31,6 +32,8 @@
     font-size: 14px;
     font-weight: 600;
     color: #fff;
+    display: inline-block;
+    width: fit-content;
 }
 
 .tag.verified {
@@ -473,5 +476,159 @@
     .thumbnail {
         width: 60px;
         height: 60px;
+    }
+}
+
+/* Design Inspiration Section */
+.design-inspiration {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #f8f8f5, #fff);
+}
+
+.design-inspiration .section-title {
+    margin-bottom: 15px;
+}
+
+.inspiration-slider {
+    position: relative;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.inspiration-slider::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.inspiration-slide {
+    flex: 0 0 300px;
+    height: 250px;
+    scroll-snap-align: start;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.inspiration-slide:hover {
+    transform: translateY(-10px);
+}
+
+.inspiration-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.inspiration-slide:hover img {
+    transform: scale(1.1);
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: #fff;
+}
+
+.slide-caption h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.slide-caption p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.slider-nav:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.slider-nav.prev {
+    left: 10px;
+}
+
+.slider-nav.next {
+    right: 10px;
+}
+
+.design-tips {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.design-tips h3 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.design-tips ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.design-tips li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.design-tips li:hover {
+    background-color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.design-tips li i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    .inspiration-slide {
+        flex: 0 0 250px;
+        height: 200px;
+    }
+    
+    .design-tips ul {
+        grid-template-columns: 1fr;
     }
 } 
